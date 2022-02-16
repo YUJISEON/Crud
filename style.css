@@ -1,0 +1,52 @@
+section {
+    width: 800px;
+    position: absolute;
+    top: 150px; left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #createBtn {
+    position: absolute;
+    top: 0px; right: 0;
+  }
+  
+  #dataList {
+    margin-top: 50px;
+  }
+  
+  #dataList #myTBody tr td:nth-child(2) {
+    max-width: 50px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  
+  #dataList #myTBody tr td:nth-child(3) {
+    max-width: 50px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  
+  #dataList #myTBody tr td:nth-child(4) {
+    max-width: 10px;
+  }
+  
+  .table .post:hover th,
+  .table .post:hover td {
+    cursor : grab;
+    color : red;
+  }
+  
+  #showModal .modal-title,
+  #showModal .modal-body p {
+    word-break: break-all;
+  }
+  
+  #writeModal .col-form-label {
+    font-weight: bold;
+  }
+
+  .modal-dialog {
+    margin-top : 10.75rem; 
+  }
