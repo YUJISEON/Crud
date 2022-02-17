@@ -178,20 +178,15 @@ class Data {
           });
       
           let $btnDel = document.getElementById("btnDel");        
-          $btnDel.onclick = () => {
+          const delActive = () => {
+            console.log("$btnDel");
             targetIndex = self.$modalId.value;
-            if(targetIndex === null) return;	
             $('#showModal').modal('hide');
-            self.del(targetIndex);	 
-          }
-            //   $btnDel.addEventListener("click", (e)=>{   
-            //       e.preventDefault();
-            //       console.log(`$btnDel index : ${self.$modalId.value}`);
-            //       targetIndex = self.$modalId.value;
-            //       if(targetIndex === null) return;	
-            //       $('#showModal').modal('hide');
-            //       self.del(targetIndex);	 
-            //   });	
+            self.del(targetIndex);
+            $btnDel.removeEventListener('click', delActive);
+          }  
+        
+          $btnDel.addEventListener("click", delActive);	
     }
   }
   
