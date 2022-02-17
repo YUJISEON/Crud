@@ -177,16 +177,13 @@ class Data {
               self.$desc.value = inputDesc;
           });
       
-          let $btnDel = document.getElementById("btnDel");        
-          const delActive = () => {
-            console.log("$btnDel");
-            targetIndex = self.$modalId.value;
-            $('#showModal').modal('hide');
-            self.del(targetIndex);
-            $btnDel.removeEventListener('click', delActive);
-          }  
-        
-          $btnDel.addEventListener("click", delActive);	
+          let $btnDel = document.getElementById("btnDel");                
+          $btnDel.addEventListener("click", ()=>{
+                console.log("$btnDel");
+                targetIndex = self.$modalId.value;
+                $('#showModal').modal('hide');
+                self.del(targetIndex);
+          }, {once: true});	
     }
   }
   
